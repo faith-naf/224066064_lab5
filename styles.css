@@ -175,7 +175,14 @@ p {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
+/* Add disabled state styling */
 
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
 .btn-success {
   /* TODO: Add success button styles */
   /* HINT: Change background-color */
