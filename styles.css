@@ -848,120 +848,237 @@ cursor: pointer;
 .modal {
   /* TODO: Add modal styles */
   /* HINT: Use display, position, top/left, width, height, background-color, z-index, justify-content, and align-items */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
   /* TODO: Add modal content styles */
   /* HINT: Use background-color, border-radius, width, max-width, padding, and box-shadow */
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+  animation: modalSlideIn 0.3s ease;
+}
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .modal-header {
   /* TODO: Add modal header styles */
   /* HINT: Use display, justify-content, align-items, and margin-bottom */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .modal-title {
   /* TODO: Add modal title styles */
   /* HINT: Use font-size and color */
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin: 0;
 }
 
 .modal-close {
   /* TODO: Add modal close button styles */
   /* HINT: Use background, border, font-size, cursor, and color */
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--gray);
+  transition: color 0.2s;
 }
 
 /* Tooltip Styles */
 .tooltip {
   /* TODO: Add tooltip styles */
   /* HINT: Use position, display, border-bottom, and cursor */
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted var(--primary);
+  cursor: help;
 }
 
 .tooltip .tooltip-text {
   /* TODO: Add tooltip text styles */
   /* HINT: Use visibility, width, background-color, color, text-align, border-radius, padding, position, z-index, bottom, left, margin-left, opacity, and transition */
+ visibility: hidden;
+  width: 200px;
+  background-color: var(--dark);
+  color: var(--white);
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.9rem;
 }
 
 .tooltip .tooltip-text::after {
   /* TODO: Add tooltip arrow styles */
   /* HINT: Use content, position, top, left, margin-left, border-width, border-style, and border-color */
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--dark) transparent transparent transparent;
 }
 
 .tooltip:hover .tooltip-text {
   /* TODO: Add hover styles for tooltip */
   /* HINT: Change visibility and opacity */
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Accordion Styles */
 .accordion {
   /* TODO: Add accordion styles */
   /* HINT: Use margin */
+   margin: 20px 0;
 }
 
 .accordion-item {
   /* TODO: Add accordion item styles */
   /* HINT: Use border, border-radius, margin-bottom, and overflow */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .accordion-header {
   /* TODO: Add accordion header styles */
   /* HINT: Use padding, background-color, cursor, display, justify-content, align-items, and font-weight */
+ padding: 20px;
+  background-color: var(--light);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  transition: background-color 0.3s;
 }
 
 .accordion-content {
   /* TODO: Add accordion content styles */
   /* HINT: Use padding, max-height, overflow, and transition */
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
 }
+
 
 .accordion-content.active {
   /* TODO: Add styles for active accordion content */
   /* HINT: Use padding and max-height */
+  padding: 20px;
+  max-height: 200px;
 }
+
 
 /* Tabs Styles */
 .tabs {
   /* TODO: Add tabs container styles */
   /* HINT: Use margin */
+   margin: 30px 0;
 }
+
 
 .tab-header {
   /* TODO: Add tab header styles */
   /* HINT: Use display and border-bottom */
+  display: flex;
+  border-bottom: 2px solid var(--border-color);
+  background-color: var(--card-bg);
+  border-radius: 8px 8px 0 0;
+
 }
 
 .tab-link {
   /* TODO: Add tab link styles */
   /* HINT: Use padding, cursor, transition, and border-bottom */
+  padding: 16px 24px;
+  cursor: pointer;
+  transition: var(--transition);
+  border-bottom: 3px solid transparent;
+  flex: 1;
+  text-align: center;
+  font-weight: 500;
 }
 
 .tab-link:hover {
   /* TODO: Add hover styles for tab links */
   /* HINT: Change color */
+  color: var(--primary);
+  background-color: var(--light);
 }
+  
 
 .tab-link.active {
   /* TODO: Add styles for active tab link */
   /* HINT: Use color and border-bottom */
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  background-color: var(--light);
 }
 
 .tab-content {
   /* TODO: Add tab content styles */
   /* HINT: Use padding */
+  padding: 0;
 }
 
 .tab-pane {
   /* TODO: Add tab pane styles */
   /* HINT: Use display property */
+   display: none;
 }
 
 .tab-pane.active {
   /* TODO: Add styles for active tab pane */
   /* HINT: Change display */
+   display: block;
 }
 
 /* Dropdown Styles */
 .dropdown {
   /* TODO: Add dropdown styles */
   /* HINT: Use position and display */
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-toggle {
