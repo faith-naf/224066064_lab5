@@ -233,26 +233,62 @@ p {
 .chips-container {
   /* TODO: Add chips container styles */
   /* HINT: Use display, flex-wrap, gap, and margin */
+   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
 }
 
 .chip {
   /* TODO: Add chip styles */
   /* HINT: Use display, align-items, padding, background-color, border-radius, font-size, color, and cursor */
+ display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: var(--light);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--dark);
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+}
+
+.chip:hover {
+  background-color: var(--light-gray);
+  transform: translateY(-2px)
 }
 
 .chip.active {
   /* TODO: Add active chip styles */
   /* HINT: Change background-color and color */
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+
 }
 
 .chip i {
   /* TODO: Add icon styles within chips */
   /* HINT: Use margin-right */
+   margin-right: 8px;
+  font-size: 1rem;
 }
 
 .chip .close {
   /* TODO: Add close button styles within chips */
   /* HINT: Use margin-left, cursor, and font-weight */
+   margin-left: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0 4px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.chip .close:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Slider Styles */
