@@ -103,33 +103,45 @@ p {
 
 /* Card Styles */
 .card {
-  /* TODO: Add card styles */
-  /* HINT: Use background-color, border-radius, box-shadow, transition */
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .card:hover {
-  /* TODO: Add hover styles for card */
-  /* HINT: Use transform and box-shadow */
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.04);
 }
 
 .card-img {
-  /* TODO: Add card image styles */
-  /* HINT: Set width, height, and object-fit */
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
 .card-content {
-  /* TODO: Add card content styles */
-  /* HINT: Add padding */
+   padding: 24px;
 }
 
 .card-title {
-  /* TODO: Add card title styles */
-  /* HINT: Set font-size, margin, and color */
+    font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #1f2937;
+  line-height: 1.3;
 }
 
 .card-text {
-  /* TODO: Add card text styles */
-  /* HINT: Set color and margin */
+    color: #6b7280;
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 /* Button Styles */
