@@ -528,37 +528,55 @@ cursor: pointer;
 .table-container {
   /* TODO: Add table container styles */
   /* HINT: Use overflow-x and margin */
+  overflow-x: auto;
+  margin: 20px 0;
 }
 
 .table {
   /* TODO: Add table styles */
   /* HINT: Use width, border-collapse, border-spacing */
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+
 }
 
 .table th,
 .table td {
   /* TODO: Add table cell styles */
   /* HINT: Use padding, text-align, border-bottom */
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .table th {
   /* TODO: Add table header styles */
   /* HINT: Use background-color, font-weight, cursor */
+  background-color: var(--light);
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--dark);
 }
 
 .table th:hover {
   /* TODO: Add hover styles for table headers */
   /* HINT: Change background-color */
+   background-color: var(--light-gray);
 }
 
 .table tr {
   /* TODO: Add table row styles */
   /* HINT: Use transition */
+ transition: var(--transition);
+
 }
 
 .table tr:hover {
   /* TODO: Add hover styles for table rows */
   /* HINT: Change background-color with rgba for transparency */
+    background-color: rgba(67, 97, 238, 0.05);
 }
 
 /* Badge Styles */
