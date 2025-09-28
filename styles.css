@@ -153,41 +153,73 @@ p {
 .btn {
   /* TODO: Add button styles */
   /* HINT: Use display, padding, background-color, color, border, border-radius, cursor, transition */
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
   /* TODO: Add button hover styles */
   /* HINT: Change background-color */
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .btn-success {
   /* TODO: Add success button styles */
   /* HINT: Change background-color */
+  background-color: var(--success);
+  color: var(--dark);
 }
 
 .btn-warning {
   /* TODO: Add warning button styles */
   /* HINT: Change background-color */
+  background-color: var(--warning);
+  color: var(--white);
 }
 
 .btn-info {
   /* TODO: Add info button styles */
   /* HINT: Change background-color */
+   background-color: var(--info);
+  color: var(--white);
 }
 
 .btn-outline {
   /* TODO: Add outline button styles */
   /* HINT: Transparent background with border and specific text color */
+ background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  box-shadow: none;
 }
 
 .btn-outline:hover {
   /* TODO: Add hover styles for outline button */
   /* HINT: Change background-color and text color */
+   background-color: var(--primary);
+  color: var(--white);
 }
 
 .btn-group {
   /* TODO: Add button group styles */
   /* HINT: Use display and gap */
+   display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 15px 0;
 }
 
 /* Chip Styles */
